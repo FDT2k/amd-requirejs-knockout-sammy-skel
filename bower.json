@@ -1,0 +1,27 @@
+{
+  "name": "amd-requirejs-knockout-sammy-skel",
+  "authors": [
+    "Fabien Di Tore <fabien@ditore.ch>"
+  ],
+  "description": "",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "knockout": "^3.4.1",
+    "sammy": "^0.7.6",
+    "requirejs": "^2.3.2",
+    "bootstrap": "^3.3.7",
+    "knockout-amd-helpers": "^1.0.0",
+    "text": "^2.0.15",
+    "knockout-postbox": "^0.5.2"
+  }
+}
