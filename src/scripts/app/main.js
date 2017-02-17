@@ -3,18 +3,23 @@ define(["knockout","Sammy"], function(ko,Sammy) {
 
         // Data
         var self = this;
-        //subscribeTo, receive variable change from other modules.
-        self.currentModule = ko.observable('controller1').subscribeTo('navigation.current');
+          //syncWith, send and receive variable change between modules.
+        self.currentModule = ko.observable('controller1').syncWith('navigation.current');
 
         // Client-side routes
-          Sammy(function () {
+        Sammy(function () {
 
+          // global router for controller
+          this.get('#/:controller',function(){
 
+             self.currentModule(this.params.controller);
 
-             this.get('', function () {
-               self.currentModule('controller1');
-              });
-          }).run();
+          });
+
+           this.get('', function () {
+             self.currentModule('controller1');
+            });
+        }).run();
     };
 
 });

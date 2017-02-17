@@ -4,8 +4,8 @@
 // except 'app' ones,
 requirejs.config({
     "baseUrl": "scripts",
+    "urlArgs": "bust=" + (new Date()).getTime(),
     "paths": {
-
       "jquery": "libs/jquery/dist/jquery.min",
       "bootstrap": "libs/bootstrap/dist/js/bootstrap.min",
       "Sammy": "libs/sammy/lib/sammy",
@@ -23,20 +23,19 @@ require(["knockout", "app/main", "jquery" ,"knockout-amd-helpers","knockout-post
     ko.amdTemplateEngine.defaultPath = "../views";
     ko.amdTemplateEngine.defaultSuffix = ".html";
     ko.amdTemplateEngine.defaultRequireTextPluginName = "text";
-    //fruits/vegetable modules have embedded template
     ko.bindingHandlers.module.templateProperty = "embeddedTemplate";
 
     setTimeout(function() {
         ko.applyBindings(new App());
     }, 0);
 
-
+// setuping jquery ajax
     var token =  "";
     $(function() {
       $.ajaxSetup({
-        headers: {
-          Authorization: 'Bearer '+token
-        }
+          headers: {
+            Authorization: 'Bearer '+token
+          }
         });
     });
 

@@ -5,25 +5,24 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="scripts/libs/bootstrap/dist/css/bootstrap.css"/>
   <title>AMD With Knockout Skel</title>
 
 </head>
 
 <body >
 
-  <section>
-
     <!-- ko module: 'nav' -->
     <!-- /ko -->
 
-
+    <div class="wrapper">
     <!-- ko module: currentModule -->
     <!-- /ko -->
+    </div>
 
 
-  </section>
-  <script data-main="scripts/app/app" src="scripts/libs/requirejs/require.js"></script>
+  <script data-main="scripts/app/boot" src="scripts/libs/requirejs/require.js"></script>
 
 </body>
 </html>

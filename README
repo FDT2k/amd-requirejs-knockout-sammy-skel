@@ -1,4 +1,23 @@
-Simple skeleton to build javascript app.
+Simple skeleton put together as a startup for JS apps.
 
 
-Run bower install in the root folder to get started.
+Run bower install in the root folder to grab deps.
+
+
+Documentation:
+
+
+Dependencies manager (Asynchronous Module Definition (AMD))
+http://requirejs.org/
+
+Two-way data binding
+http://knockoutjs.com/
+
+Module management plugin for knockout
+https://github.com/rniemeyer/knockout-amd-helpers
+
+JQuery
+https://jquery.com/
+
+Bootstrap
+http://getbootstrap.com/
