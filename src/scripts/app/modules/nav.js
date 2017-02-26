@@ -11,7 +11,7 @@ define(["knockout","bootstrap","jquery"], function(ko,bootstrap,$) {
       self.anotherItemsSet=[{item:'anotherController1'},{item:'anotherController2'}];
 
       //syncWith, send and receive variable change between modules.
-      self.currentNavItem= ko.observable('controller1').syncWith('navigation.current');
+      self.currentNavItem= ko.observable().syncWith('navigation.current',true);
       self.currentNavItemActive = function(item){
 
         return self.currentNavItem()==item;
@@ -38,6 +38,7 @@ define(["knockout","bootstrap","jquery"], function(ko,bootstrap,$) {
 
       /*go to the wanted controller without using url*/
       self.goToMenu = function(navItem){
+        console.log("nav changed module "+navItem);
         self.currentNavItem(navItem.item);
       }
     }

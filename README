@@ -1,10 +1,12 @@
 Simple skeleton put together as a startup for JS apps.
 
 
-Run bower install in the root folder to grab deps.
+Getting started
+
+Run "bower install" in the root folder to grab deps.
 
 
-Documentation:
+Core Components:
 
 
 Dependencies manager (Asynchronous Module Definition (AMD))
@@ -21,3 +23,27 @@ https://jquery.com/
 
 Bootstrap
 http://getbootstrap.com/
+
+Optimizer
+
+http://requirejs.org/docs/optimization.html
+
+
+
+To build your app simply run
+
+$> r.js -o build.js
+at the root of the project folder
+more details here: https://github.com/requirejs/example-multipage/
+
+
+Structure
+
+At a glance, you write your modules into scripts/app/modules. If you want to add a new dependency, add it in bower, scripts/app/boot.js, build.js
+
+To load a module you have to way:
+ - bind a route in main.js which handle the Sammy the router
+ - dynamically assign module and initialData by setting
+
+Please note that main.js module acts as a singleton and return an instance of himself, which will be passed as
+the same instance if you require it in your modules.

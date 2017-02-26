@@ -15,7 +15,9 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav"  data-bind="foreach: {data:$module.navItems, afterAdd:$module.afterAdd}">
-        <li class="" data-bind="css: {active: $module.currentNavItemActive(item)}"><a href="#" data-bind="text: item, attr:{href:'#/'+item}">Link <span class="sr-only">(current)</span></a></li>
+        <li class="" data-bind="css: {active: $module.currentNavItemActive(item)}">
+          <a href="#" data-bind="text: item, attr:{href:'#/'+item}">Link <span class="sr-only">(current)</span></a>
+        </li>
 
       </ul>
 
